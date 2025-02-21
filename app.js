@@ -11,11 +11,10 @@ const app = express();
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 
-
-app.use(express.json()); // JSON verilerini işlemek için middleware
+app.use(express.json()); // Middleware to handle JSON data
 app.get("/", (req, res) => {
-    res.send("API Çalışıyor!");
+    res.send("API is running!");
 });
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`🚀 Sunucu ${PORT} portunda çalışıyor!`));
+app.listen(PORT, () => console.log(`🚀 Server is running on port ${PORT}!`));
