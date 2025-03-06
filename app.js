@@ -19,11 +19,7 @@ const app = express();
 app.use(express.json());
 
 // CORS Configuration (Optional: Restrict origins)
-app.use(cors({
-    origin: ['http://localhost:3000', 'https://mydomain.com'], // Allowed domains
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true
-}));
+app.use(cors());
 
 // Define Routes
 app.use("/api/auth", authRoutes);
