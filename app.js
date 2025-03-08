@@ -15,7 +15,7 @@ connectDB();
 // Initialize Express App
 const app = express();
 
-// Middleware to handle JSON data
+// middleware to handle JSON data
 app.use(express.json());
 
 // CORS Configuration (Optional: Restrict origins)
@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
     res.send("API is running!");
 });
 
-// Error Handling Middleware
+// Error Handling middleware
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).json({ error: 'Internal Server Error' });
